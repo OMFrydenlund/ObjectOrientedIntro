@@ -7,26 +7,22 @@ using System.Threading.Tasks;
 namespace SkoleKonsoll
 {
     internal class Pokemon
-    {
-        public string Name { get; set; }
-        public int Level { get; set; }
-        public string Type { get; set; }
-        public string AbilityName { get; set; }
+    {       
+        string Name { get; set; }
+        int Level { get; set; }
+        string Type { get; set; }
+        string AbilityName { get; set; }
         
-        //is a constructor needed NOPE
+        public Pokemon(string name, int level, string type, string abilityName)
+        {
+            Name = name;
+            Level = level;
+            Type = type;
+            AbilityName = abilityName;
+        }
         public void ShowPokemonInfo()
         {
             Console.WriteLine($"Name: {Name}\nLevel: {Level}\nType: {Type}\nAbility: {AbilityName}");
         }
-
-        // kode nedenfor i Main()
-
-        //Pokemon snorlax = new Pokemon();
-        //snorlax.Name = "Snorlax";
-        //snorlax.Level = 98;
-        //snorlax.Type = "Normal";
-        //snorlax.AbilityName = "Bash";
-
-        //snorlax.ShowPokemonInfo();
     }
 }
